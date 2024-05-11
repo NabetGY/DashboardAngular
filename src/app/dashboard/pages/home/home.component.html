@@ -1,0 +1,29 @@
+<div class="">
+
+  <div class="flex flex-row flex-wrap gap-3 align-items-center justify-content-center mb-5">
+
+
+    @for (item of cardList; track item.title) {
+
+      <dashboard-card-icon [cardIconInfo]="item"></dashboard-card-icon>
+
+    }
+
+  </div>
+
+  <div class="flex flex-row flex-wrap align-items-center justify-content-center w-full">
+
+    <dashboard-table
+      [data]="dashboardService.mpp1List()"
+      [columns]="tableColumns"
+      class="w-full"
+    >
+    </dashboard-table>
+
+  </div>
+
+  <div class="">
+  </div>
+
+
+</div>
